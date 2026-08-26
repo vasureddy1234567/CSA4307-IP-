@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ComplainEase</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:#f4f6f9;
+}
+
+header{
+background:#b71c1c;
+color:white;
+padding:20px;
+text-align:center;
+}
+
+header h1{
+font-size:40px;
+}
+
+nav{
+margin-top:15px;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin:15px;
+font-size:18px;
+font-weight:bold;
+}
+
+nav a:hover{
+color:yellow;
+}
+
+.hero{
+height:420px;
+background:url("https://images.unsplash.com/photo-1516321497487-e288fb19713f?auto=format&fit=crop&w=1400&q=80");
+background-size:cover;
+background-position:center;
+display:flex;
+justify-content:center;
+align-items:center;
+}
+
+.hero-box{
+background:rgba(0,0,0,.6);
+padding:35px;
+border-radius:10px;
+text-align:center;
+color:white;
+}
+
+.hero-box h2{
+font-size:38px;
+margin-bottom:15px;
+}
+
+.hero-box p{
+font-size:18px;
+margin-bottom:20px;
+}
+
+.hero-box button{
+padding:12px 30px;
+background:#ff9800;
+color:white;
+border:none;
+font-size:18px;
+cursor:pointer;
+border-radius:5px;
+}
+
+.login{
+padding:50px;
+text-align:center;
+background:white;
+}
+
+.login h2{
+font-size:35px;
+margin-bottom:20px;
+}
+
+.login input,
+.login select{
+width:300px;
+padding:12px;
+margin:10px;
+border:1px solid gray;
+border-radius:5px;
+}
+
+.login button{
+padding:12px 25px;
+background:#b71c1c;
+color:white;
+border:none;
+cursor:pointer;
+border-radius:5px;
+}
+
+.services{
+padding:50px;
+}
+
+.services h2{
+text-align:center;
+font-size:35px;
+margin-bottom:25px;
+}
+
+.cards{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:20px;
+}
+
+.card{
+background:white;
+width:250px;
+padding:20px;
+border-radius:10px;
+box-shadow:0 4px 8px gray;
+transition:.3s;
+}
+
+.card:hover{
+transform:scale(1.05);
+}
+
+.card h3{
+color:#b71c1c;
+margin-bottom:10px;
+}
+
+.card p{
+line-height:24px;
+}
+
+.complaint{
+padding:50px;
+background:#fff3f3;
+text-align:center;
+}
+
+.complaint h2{
+font-size:35px;
+margin-bottom:20px;
+}
+
+.complaint input,
+.complaint textarea{
+width:70%;
+padding:12px;
+margin:10px;
+border:1px solid gray;
+border-radius:5px;
+}
+
+.complaint button{
+padding:12px 25px;
+background:#b71c1c;
+color:white;
+border:none;
+cursor:pointer;
+border-radius:5px;
+}
+
+.status{
+padding:50px;
+text-align:center;
+}
+
+.status h2{
+font-size:35px;
+margin-bottom:20px;
+}
+
+.status table{
+width:90%;
+margin:auto;
+border-collapse:collapse;
+background:white;
+}
+
+.status th{
+background:#b71c1c;
+color:white;
+padding:15px;
+}
+
+.status td{
+padding:15px;
+border:1px solid gray;
+}
+.contact{
+padding:50px;
+background:#fff3f3;
+text-align:center;
+}
+
+.contact h2{
+font-size:35px;
+margin-bottom:20px;
+}
+
+.contact input,
+.contact textarea{
+width:70%;
+padding:12px;
+margin:10px;
+border:1px solid gray;
+border-radius:5px;
+}
+
+.contact button{
+padding:12px 30px;
+background:#b71c1c;
+color:white;
+border:none;
+cursor:pointer;
+border-radius:5px;
+}
+
+footer{
+background:#222;
+color:white;
+text-align:center;
+padding:20px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<h1>ComplainEase</h1>
+
+<nav>
+
+<a href="#">Home</a>
+
+<a href="#">Register</a>
+
+<a href="#">Complaint</a>
+
+<a href="#">Officer</a>
+
+<a href="#">Admin</a>
+
+<a href="#">Contact</a>
+
+</nav>
+
+</header>
+
+<section class="hero">
+
+<div class="hero-box">
+
+<h2>Register Your Complaint Online</h2>
+
+<p>Fast • Easy • Transparent Complaint Management</p>
+
+<button>Post Complaint</button>
+
+</div>
+
+</section>
+
+<section class="login">
+
+<h2>User Login</h2>
+
+<input type="text" placeholder="Username"><br>
+
+<input type="password" placeholder="Password"><br>
+
+<select>
+
+<option>User</option>
+
+<option>Officer</option>
+
+<option>Admin</option>
+
+</select><br>
+
+<button onclick="login()">Login</button>
+
+</section>
+
+<section class="services">
+
+<h2>Our Services</h2>
+
+<div class="cards">
+
+<div class="card">
+
+<h3>Complaint Registration</h3>
+
+<p>Submit complaints with complete details.</p>
+
+</div>
+
+<div class="card">
+
+<h3>Google Map</h3>
+
+<p>Mark complaint location easily.</p>
+
+</div>
+
+<div class="card">
+
+<h3>Status Tracking</h3>
+
+<p>Check complaint progress online.</p>
+
+</div>
+
+<div class="card">
+
+<h3>Officer Support</h3>
+
+<p>Receive updates from officers.</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="complaint">
+
+<h2>Complaint Form</h2>
+
+<input type="text" placeholder="Your Name"><br>
+
+<input type="text" placeholder="Complaint Location"><br>
+
+<textarea placeholder="Describe Your Complaint"></textarea><br>
+
+<button onclick="submitComplaint()">Submit Complaint</button>
+
+</section>
+
+<section class="status">
+
+<h2>Complaint Status</h2>
+
+<table>
+
+<tr>
+
+<th>Complaint ID</th>
+
+<th>Category</th>
+
+<th>Status</th>
+
+<th>Officer</th>
+
+</tr>
+
+<tr>
+
+<td>C101</td>
+
+<td>Road Damage</td>
+
+<td>In Progress</td>
+
+<td>Officer Raj</td>
+
+</tr>
+
+<tr>
+
+<td>C102</td>
+
+<td>Water Supply</td>
+
+<td>Resolved</td>
+
+<td>Officer Priya</td>
+
+</tr>
+
+<tr>
+
+<td>C103</td>
+
+<td>Street Light</td>
+
+<td>Pending</td>
+
+<td>Officer Arun</td>
+
+</tr>
+
+</table>
+
+</section>
+
+<section class="contact">
+
+<h2>Feedback</h2>
+
+<input type="text" placeholder="Your Name"><br>
+
+<input type="email" placeholder="Email"><br>
+
+<textarea placeholder="Write Your Feedback"></textarea><br>
+
+<button onclick="feedback()">Submit Feedback</button>
+
+</section>
+
+<footer>
+
+<h3>ComplainEase Complaint Management System</h3>
+
+<p>Email : support@complainease.com</p>
+
+<p>Phone : +91 9876543210</p>
+
+<p>© 2026 ComplainEase. All Rights Reserved.</p>
+
+</footer>
+
+<script>
+
+function login(){
+
+alert("Login Successful!");
+
+}
+
+function submitComplaint(){
+
+alert("Complaint Registered Successfully!");
+
+}
+
+function feedback(){
+
+alert("Feedback Submitted Successfully!");
+
+}
+
+</script>
+
+</body>
+
+</html>

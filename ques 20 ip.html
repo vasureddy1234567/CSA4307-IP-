@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>RentRide</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Verdana,sans-serif;
+}
+
+body{
+
+background:linear-gradient(135deg,#2193b0,#6dd5ed,#cc2b5e,#753a88);
+background-size:400% 400%;
+animation:bg 12s infinite alternate;
+
+}
+
+@keyframes bg{
+
+0%{background-position:left;}
+100%{background-position:right;}
+
+}
+
+header{
+
+background:rgba(255,255,255,.2);
+backdrop-filter:blur(10px);
+padding:20px;
+
+}
+
+header h1{
+
+text-align:center;
+font-size:45px;
+color:white;
+letter-spacing:3px;
+
+}
+
+nav{
+
+text-align:center;
+margin-top:15px;
+
+}
+
+nav a{
+
+color:white;
+text-decoration:none;
+padding:12px 18px;
+background:#ff9800;
+margin:8px;
+border-radius:30px;
+font-weight:bold;
+display:inline-block;
+
+}
+
+nav a:hover{
+
+background:white;
+color:#333;
+
+}
+
+.hero{
+
+display:flex;
+justify-content:space-around;
+align-items:center;
+padding:70px;
+color:white;
+
+}
+
+.left{
+
+width:45%;
+
+}
+
+.left h2{
+
+font-size:55px;
+margin-bottom:20px;
+
+}
+
+.left p{
+
+font-size:20px;
+line-height:35px;
+
+}
+
+.left button{
+
+margin-top:30px;
+padding:15px 35px;
+background:#00e676;
+color:white;
+border:none;
+font-size:20px;
+border-radius:40px;
+cursor:pointer;
+
+}
+
+.right{
+
+width:45%;
+text-align:center;
+
+}
+
+.right img{
+
+width:100%;
+border-radius:20px;
+box-shadow:0 0 30px white;
+
+}
+
+.search{
+
+margin:40px;
+background:white;
+padding:30px;
+border-radius:20px;
+text-align:center;
+box-shadow:0 10px 20px gray;
+
+}
+
+.search h2{
+
+color:#673ab7;
+margin-bottom:20px;
+
+}
+
+.search input,
+.search select{
+
+padding:12px;
+width:220px;
+margin:10px;
+border-radius:10px;
+border:1px solid gray;
+
+}
+
+.search button{
+
+padding:12px 30px;
+background:#673ab7;
+color:white;
+border:none;
+border-radius:10px;
+cursor:pointer;
+
+}
+
+.vehicles{
+
+padding:50px;
+
+}
+
+.vehicles h2{
+
+text-align:center;
+font-size:40px;
+color:white;
+margin-bottom:30px;
+
+}
+
+.cards{
+
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:30px;
+
+}
+
+.card{
+
+background:white;
+width:280px;
+border-radius:20px;
+overflow:hidden;
+box-shadow:0 10px 20px black;
+
+transition:.4s;
+
+}
+
+.card:hover{
+
+transform:translateY(-10px);
+
+}
+
+.card img{
+
+width:100%;
+height:180px;
+
+}
+
+.card h3{
+
+padding:15px;
+color:#673ab7;
+
+}
+
+.card p{
+
+padding:10px;
+
+}
+
+.price{
+
+padding:10px;
+font-size:24px;
+color:green;
+font-weight:bold;
+
+}
+
+.card button{
+
+margin:15px;
+padding:12px;
+width:90%;
+background:#ff4081;
+color:white;
+border:none;
+border-radius:10px;
+cursor:pointer;
+
+}
+
+.booking{
+
+padding:50px;
+background:white;
+margin:40px;
+border-radius:20px;
+text-align:center;
+
+}
+
+.booking h2{
+
+color:#673ab7;
+margin-bottom:20px;
+
+}
+
+.booking input,
+.booking select{
+
+width:300px;
+padding:12px;
+margin:10px;
+border-radius:10px;
+border:1px solid gray;
+
+}
+
+.booking button{
+
+padding:12px 35px;
+background:#00c853;
+color:white;
+border:none;
+border-radius:10px;
+cursor:pointer;
+
+}
+
+.status{
+
+padding:50px;
+
+}
+
+.status h2{
+
+text-align:center;
+color:white;
+font-size:35px;
+margin-bottom:20px;
+
+}
+
+.status table{
+
+width:90%;
+margin:auto;
+background:white;
+border-collapse:collapse;
+
+}
+
+.status th{
+
+background:#673ab7;
+color:white;
+padding:15px;
+
+}
+
+.status td{
+
+padding:15px;
+border:1px solid gray;
+
+}
+.contact{
+
+padding:50px;
+margin:40px;
+background:white;
+border-radius:20px;
+text-align:center;
+
+}
+
+.contact h2{
+
+color:#673ab7;
+margin-bottom:20px;
+
+}
+
+.contact input,
+.contact textarea{
+
+width:70%;
+padding:12px;
+margin:10px;
+border-radius:10px;
+border:1px solid gray;
+
+}
+
+.contact button{
+
+padding:12px 35px;
+background:#ff4081;
+color:white;
+border:none;
+border-radius:10px;
+cursor:pointer;
+
+}
+
+footer{
+
+background:#111;
+color:white;
+text-align:center;
+padding:25px;
+margin-top:40px;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<h1>🚗 RentRide</h1>
+
+<nav>
+
+<a href="#">Home</a>
+
+<a href="#">Vehicles</a>
+
+<a href="#">Booking</a>
+
+<a href="#">Status</a>
+
+<a href="#">Profile</a>
+
+<a href="#">Contact</a>
+
+</nav>
+
+</header>
+
+<section class="hero">
+
+<div class="left">
+
+<h2>Drive Your Dream Car Today!</h2>
+
+<p>
+Choose from luxury cars, SUVs, trucks and hatchbacks at affordable prices.
+Book online in just a few clicks and enjoy a safe journey.
+</p>
+
+<button onclick="book()">Book Now</button>
+
+</div>
+
+<div class="right">
+
+<img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=900&q=80">
+
+</div>
+
+</section>
+
+<section class="search">
+
+<h2>Search Vehicle</h2>
+
+<input type="text" placeholder="Enter Location">
+
+<select>
+
+<option>Select Vehicle</option>
+
+<option>Car</option>
+
+<option>SUV</option>
+
+<option>Truck</option>
+
+<option>Luxury Car</option>
+
+</select>
+
+<input type="date">
+
+<button onclick="searchVehicle()">Search</button>
+
+</section>
+
+<section class="vehicles">
+
+<h2>Available Vehicles</h2>
+
+<div class="cards">
+
+<div class="card">
+
+<img src="https://picsum.photos/300/200?car">
+
+<h3>Hyundai Creta</h3>
+
+<p>Comfortable SUV with AC</p>
+
+<div class="price">₹2200 / Day</div>
+
+<button onclick="book()">Book</button>
+
+</div>
+
+<div class="card">
+
+<img src="https://picsum.photos/300/200?bmw">
+
+<h3>BMW X1</h3>
+
+<p>Luxury Premium SUV</p>
+
+<div class="price">₹5500 / Day</div>
+
+<button onclick="book()">Book</button>
+
+</div>
+
+<div class="card">
+
+<img src="https://picsum.photos/300/200?audi">
+
+<h3>Audi A4</h3>
+
+<p>Luxury Sedan</p>
+
+<div class="price">₹6200 / Day</div>
+
+<button onclick="book()">Book</button>
+
+</div>
+
+<div class="card">
+
+<img src="https://picsum.photos/300/200?jeep">
+
+<h3>Mahindra Thar</h3>
+
+<p>Adventure SUV</p>
+
+<div class="price">₹3500 / Day</div>
+
+<button onclick="book()">Book</button>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="booking">
+
+<h2>Vehicle Booking Form</h2>
+
+<input type="text" placeholder="Customer Name"><br>
+
+<input type="text" placeholder="Mobile Number"><br>
+
+<input type="text" placeholder="Address"><br>
+
+<select>
+
+<option>Select Vehicle</option>
+
+<option>Hyundai Creta</option>
+
+<option>BMW X1</option>
+
+<option>Audi A4</option>
+
+<option>Mahindra Thar</option>
+
+</select>
+
+<br>
+
+<button onclick="confirmBooking()">Confirm Booking</button>
+
+</section>
+
+<section class="status">
+
+<h2>Booking Status</h2>
+
+<table>
+
+<tr>
+
+<th>Booking ID</th>
+
+<th>Vehicle</th>
+
+<th>Status</th>
+
+<th>Pickup Time</th>
+
+</tr>
+
+<tr>
+
+<td>RR101</td>
+
+<td>BMW X1</td>
+
+<td>Approved</td>
+
+<td>10:00 AM</td>
+
+</tr>
+
+<tr>
+
+<td>RR102</td>
+
+<td>Hyundai Creta</td>
+
+<td>Pending</td>
+
+<td>--</td>
+
+</tr>
+
+<tr>
+
+<td>RR103</td>
+
+<td>Audi A4</td>
+
+<td>Completed</td>
+
+<td>09:30 AM</td>
+
+</tr>
+
+</table>
+
+</section>
+
+<section class="contact">
+
+<h2>Contact RentRide</h2>
+
+<input type="text" placeholder="Your Name"><br>
+
+<input type="email" placeholder="Email"><br>
+
+<textarea placeholder="Message"></textarea><br>
+
+<button onclick="sendMessage()">Send</button>
+
+</section>
+
+<footer>
+
+<h2>🚘 RentRide Vehicle Rental System</h2>
+
+<p>Email : support@rentride.com</p>
+
+<p>Phone : +91 9876543210</p>
+
+<p>24 × 7 Customer Support</p>
+
+<p>© 2026 RentRide. All Rights Reserved.</p>
+
+</footer>
+
+<script>
+
+function searchVehicle(){
+
+alert("Searching Available Vehicles...");
+
+}
+
+function book(){
+
+alert("Vehicle Selected!");
+
+}
+
+function confirmBooking(){
+
+alert("Booking Confirmed Successfully!");
+
+}
+
+function sendMessage(){
+
+alert("Message Sent Successfully!");
+
+}
+
+</script>
+
+</body>
+
+</html>

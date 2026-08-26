@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>InsureEasy</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:#f4f7fb;
+}
+
+header{
+background:#004080;
+color:white;
+padding:20px;
+text-align:center;
+}
+
+header h1{
+font-size:40px;
+}
+
+nav{
+margin-top:15px;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin:15px;
+font-size:18px;
+font-weight:bold;
+}
+
+nav a:hover{
+color:yellow;
+}
+
+.hero{
+height:420px;
+background:url("https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=1400&q=80");
+background-size:cover;
+background-position:center;
+display:flex;
+justify-content:center;
+align-items:center;
+}
+
+.hero-box{
+background:rgba(0,0,0,.6);
+padding:35px;
+border-radius:10px;
+text-align:center;
+color:white;
+}
+
+.hero-box h2{
+font-size:38px;
+margin-bottom:15px;
+}
+
+.hero-box p{
+font-size:18px;
+margin-bottom:20px;
+}
+
+.hero-box button{
+padding:12px 30px;
+background:orange;
+border:none;
+color:white;
+font-size:18px;
+cursor:pointer;
+border-radius:5px;
+}
+
+.hero-box button:hover{
+background:red;
+}
+
+.login{
+padding:50px;
+text-align:center;
+background:white;
+}
+
+.login h2{
+margin-bottom:20px;
+font-size:35px;
+}
+
+.login input{
+width:300px;
+padding:12px;
+margin:10px;
+border:1px solid gray;
+border-radius:5px;
+}
+
+.login select{
+width:300px;
+padding:12px;
+margin:10px;
+border-radius:5px;
+}
+
+.login button{
+padding:12px 30px;
+background:#004080;
+color:white;
+border:none;
+cursor:pointer;
+border-radius:5px;
+}
+
+.features{
+padding:50px;
+}
+
+.features h2{
+text-align:center;
+font-size:35px;
+margin-bottom:30px;
+}
+
+.cards{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:25px;
+}
+
+.card{
+background:white;
+width:280px;
+padding:20px;
+border-radius:10px;
+box-shadow:0 4px 10px gray;
+transition:.3s;
+}
+
+.card:hover{
+transform:scale(1.05);
+}
+
+.card h3{
+color:#004080;
+margin-bottom:10px;
+}
+
+.card p{
+line-height:25px;
+}
+
+.policy{
+padding:50px;
+background:#eef5ff;
+text-align:center;
+}
+
+.policy h2{
+font-size:35px;
+margin-bottom:20px;
+}
+
+.policy table{
+width:90%;
+margin:auto;
+border-collapse:collapse;
+background:white;
+}
+
+.policy th{
+background:#004080;
+color:white;
+padding:15px;
+}
+
+.policy td{
+padding:15px;
+border:1px solid gray;
+}
+.agent{
+padding:50px;
+text-align:center;
+}
+
+.agent h2{
+font-size:35px;
+margin-bottom:20px;
+}
+
+.agent-box{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:20px;
+}
+
+.box{
+background:white;
+padding:20px;
+width:250px;
+border-radius:10px;
+box-shadow:0 4px 8px gray;
+}
+
+.box h3{
+color:#004080;
+margin-bottom:10px;
+}
+
+.box p{
+margin-bottom:10px;
+}
+
+.box button{
+padding:10px 20px;
+background:orange;
+border:none;
+color:white;
+border-radius:5px;
+cursor:pointer;
+}
+
+.sms{
+background:#004080;
+color:white;
+padding:50px;
+text-align:center;
+}
+
+.sms h2{
+margin-bottom:20px;
+}
+
+.sms input{
+width:300px;
+padding:12px;
+margin:10px;
+border:none;
+border-radius:5px;
+}
+
+.sms textarea{
+width:300px;
+height:100px;
+padding:12px;
+margin:10px;
+border:none;
+border-radius:5px;
+}
+
+.sms button{
+padding:12px 30px;
+background:orange;
+color:white;
+border:none;
+cursor:pointer;
+border-radius:5px;
+}
+
+footer{
+background:black;
+color:white;
+text-align:center;
+padding:20px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<h1>INSURE EASY</h1>
+
+<nav>
+
+<a href="#">Home</a>
+
+<a href="#">Policies</a>
+
+<a href="#">Agents</a>
+
+<a href="#">Customers</a>
+
+<a href="#">Admin</a>
+
+<a href="#">Login</a>
+
+</nav>
+
+</header>
+
+<section class="hero">
+
+<div class="hero-box">
+
+<h2>Secure Your Future Today</h2>
+
+<p>Health • Vehicle • Life • Home Insurance</p>
+
+<button>Buy Policy</button>
+
+</div>
+
+</section>
+
+<section class="login">
+
+<h2>User Login</h2>
+
+<input type="text" placeholder="Username"><br>
+
+<input type="password" placeholder="Password"><br>
+
+<select>
+
+<option>Customer</option>
+
+<option>Agent</option>
+
+<option>Admin</option>
+
+</select>
+
+<br>
+
+<button onclick="login()">Login</button>
+
+</section>
+
+<section class="features">
+
+<h2>Our Services</h2>
+
+<div class="cards">
+
+<div class="card">
+
+<h3>Health Insurance</h3>
+
+<p>Affordable medical insurance plans for your family.</p>
+
+</div>
+
+<div class="card">
+
+<h3>Vehicle Insurance</h3>
+
+<p>Protect your bike and car with quick claim support.</p>
+
+</div>
+
+<div class="card">
+
+<h3>Home Insurance</h3>
+
+<p>Keep your property safe from unexpected damages.</p>
+
+</div>
+
+<div class="card">
+
+<h3>Life Insurance</h3>
+
+<p>Financial security for your loved ones.</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="policy">
+
+<h2>Available Policies</h2>
+
+<table>
+
+<tr>
+
+<th>Policy</th>
+
+<th>Premium</th>
+
+<th>Duration</th>
+
+</tr>
+
+<tr>
+
+<td>Health Plan</td>
+
+<td>₹8,000</td>
+
+<td>1 Year</td>
+
+</tr>
+
+<tr>
+
+<td>Car Insurance</td>
+
+<td>₹12,000</td>
+
+<td>1 Year</td>
+
+</tr>
+
+<tr>
+
+<td>Life Insurance</td>
+
+<td>₹20,000</td>
+
+<td>10 Years</td>
+
+</tr>
+
+<tr>
+
+<td>Home Insurance</td>
+
+<td>₹15,000</td>
+
+<td>5 Years</td>
+
+</tr>
+
+</table>
+
+</section>
+
+<section class="agent">
+
+<h2>Insurance Agents</h2>
+
+<div class="agent-box">
+
+<div class="box">
+
+<h3>Rahul Kumar</h3>
+
+<p>Senior Insurance Agent</p>
+
+<button>Contact</button>
+
+</div>
+
+<div class="box">
+
+<h3>Priya Sharma</h3>
+
+<p>Health Insurance Expert</p>
+
+<button>Contact</button>
+
+</div>
+
+<div class="box">
+
+<h3>Arun Raj</h3>
+
+<p>Vehicle Insurance Specialist</p>
+
+<button>Contact</button>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="sms">
+
+<h2>SMS Alert Service</h2>
+
+<input type="text" placeholder="Mobile Number"><br>
+
+<textarea placeholder="Reminder Message"></textarea><br>
+
+<button onclick="sendSMS()">Send SMS</button>
+
+</section>
+
+<footer>
+
+<h3>InsureEasy Insurance Management System</h3>
+
+<p>Email : support@insureeasy.com</p>
+
+<p>Phone : +91 9876543210</p>
+
+<p>© 2026 All Rights Reserved</p>
+
+</footer>
+
+<script>
+
+function login(){
+
+alert("Login Successful!");
+
+}
+
+function sendSMS(){
+
+alert("SMS Alert Sent Successfully!");
+
+}
+
+</script>
+
+</body>
+
+</html>

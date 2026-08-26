@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EasyToll</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:#f5f5f5;
+}
+
+header{
+background:#0d47a1;
+color:white;
+padding:20px;
+text-align:center;
+}
+
+header h1{
+font-size:40px;
+}
+
+nav{
+margin-top:15px;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin:15px;
+font-size:18px;
+font-weight:bold;
+}
+
+nav a:hover{
+color:yellow;
+}
+
+.hero{
+height:420px;
+background:url("https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1400&q=80");
+background-size:cover;
+background-position:center;
+display:flex;
+justify-content:center;
+align-items:center;
+}
+
+.hero-box{
+background:rgba(0,0,0,.6);
+padding:35px;
+border-radius:10px;
+text-align:center;
+color:white;
+}
+
+.hero-box h2{
+font-size:38px;
+margin-bottom:15px;
+}
+
+.hero-box p{
+font-size:18px;
+margin-bottom:20px;
+}
+
+.hero-box button{
+padding:12px 30px;
+background:#ff9800;
+border:none;
+color:white;
+font-size:18px;
+cursor:pointer;
+border-radius:5px;
+}
+
+.login{
+padding:50px;
+text-align:center;
+background:white;
+}
+
+.login h2{
+font-size:35px;
+margin-bottom:20px;
+}
+
+.login input,
+.login select{
+width:300px;
+padding:12px;
+margin:10px;
+border:1px solid gray;
+border-radius:5px;
+}
+
+.login button{
+padding:12px 25px;
+background:#0d47a1;
+color:white;
+border:none;
+border-radius:5px;
+cursor:pointer;
+}
+
+.services{
+padding:50px;
+}
+
+.services h2{
+text-align:center;
+font-size:35px;
+margin-bottom:25px;
+}
+
+.cards{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:20px;
+}
+
+.card{
+background:white;
+width:250px;
+padding:20px;
+border-radius:10px;
+box-shadow:0 4px 8px gray;
+transition:.3s;
+}
+
+.card:hover{
+transform:scale(1.05);
+}
+
+.card h3{
+color:#0d47a1;
+margin-bottom:10px;
+}
+
+.card p{
+line-height:24px;
+}
+
+.wallet{
+padding:50px;
+background:#eef5ff;
+text-align:center;
+}
+
+.wallet h2{
+font-size:35px;
+margin-bottom:20px;
+}
+
+.wallet input{
+width:300px;
+padding:12px;
+margin:10px;
+border:1px solid gray;
+border-radius:5px;
+}
+
+.wallet button{
+padding:12px 25px;
+background:#0d47a1;
+color:white;
+border:none;
+cursor:pointer;
+border-radius:5px;
+}
+
+.status{
+padding:50px;
+text-align:center;
+}
+
+.status h2{
+font-size:35px;
+margin-bottom:20px;
+}
+
+.status table{
+width:90%;
+margin:auto;
+border-collapse:collapse;
+background:white;
+}
+
+.status th{
+background:#0d47a1;
+color:white;
+padding:15px;
+}
+
+.status td{
+padding:15px;
+border:1px solid gray;
+}
+.contact{
+padding:50px;
+background:#eef5ff;
+text-align:center;
+}
+
+.contact h2{
+font-size:35px;
+margin-bottom:20px;
+}
+
+.contact input,
+.contact textarea{
+width:70%;
+padding:12px;
+margin:10px;
+border:1px solid gray;
+border-radius:5px;
+}
+
+.contact button{
+padding:12px 30px;
+background:#0d47a1;
+color:white;
+border:none;
+border-radius:5px;
+cursor:pointer;
+}
+
+footer{
+background:#222;
+color:white;
+text-align:center;
+padding:20px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<h1>EasyToll</h1>
+
+<nav>
+
+<a href="#">Home</a>
+
+<a href="#">Register</a>
+
+<a href="#">eWallet</a>
+
+<a href="#">Toll Pass</a>
+
+<a href="#">QR Code</a>
+
+<a href="#">Contact</a>
+
+</nav>
+
+</header>
+
+<section class="hero">
+
+<div class="hero-box">
+
+<h2>Pay Toll Without Waiting</h2>
+
+<p>Fast • Secure • Cashless Travel</p>
+
+<button>Buy Toll Pass</button>
+
+</div>
+
+</section>
+
+<section class="login">
+
+<h2>User Login</h2>
+
+<input type="text" placeholder="Username"><br>
+
+<input type="password" placeholder="Password"><br>
+
+<select>
+
+<option>User</option>
+
+<option>Admin</option>
+
+<option>Toll Gate Staff</option>
+
+</select>
+
+<br>
+
+<button onclick="login()">Login</button>
+
+</section>
+
+<section class="services">
+
+<h2>EasyToll Services</h2>
+
+<div class="cards">
+
+<div class="card">
+
+<h3>User Registration</h3>
+
+<p>Create your EasyToll account.</p>
+
+</div>
+
+<div class="card">
+
+<h3>eWallet</h3>
+
+<p>Add money and pay toll online.</p>
+
+</div>
+
+<div class="card">
+
+<h3>QR Code</h3>
+
+<p>Generate QR code for toll pass.</p>
+
+</div>
+
+<div class="card">
+
+<h3>Toll Pass</h3>
+
+<p>Apply and renew toll passes.</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="wallet">
+
+<h2>Recharge eWallet</h2>
+
+<input type="text" placeholder="Vehicle Number"><br>
+
+<input type="number" placeholder="Enter Amount"><br>
+
+<button onclick="wallet()">Add Money</button>
+
+</section>
+
+<section class="status">
+
+<h2>Toll Pass Details</h2>
+
+<table>
+
+<tr>
+
+<th>Pass ID</th>
+
+<th>Vehicle</th>
+
+<th>Status</th>
+
+<th>QR Code</th>
+
+</tr>
+
+<tr>
+
+<td>TP101</td>
+
+<td>TN09AB1234</td>
+
+<td>Approved</td>
+
+<td>Available</td>
+
+</tr>
+
+<tr>
+
+<td>TP102</td>
+
+<td>TN22CD5678</td>
+
+<td>Pending</td>
+
+<td>Waiting</td>
+
+</tr>
+
+<tr>
+
+<td>TP103</td>
+
+<td>TN11EF9999</td>
+
+<td>Approved</td>
+
+<td>Available</td>
+
+</tr>
+
+</table>
+
+<br>
+
+<button onclick="qr()">Generate QR Code</button>
+
+<button onclick="verify()">Verify Toll Pass</button>
+
+</section>
+
+<section class="contact">
+
+<h2>Contact EasyToll</h2>
+
+<input type="text" placeholder="Your Name"><br>
+
+<input type="email" placeholder="Email"><br>
+
+<textarea placeholder="Message"></textarea><br>
+
+<button onclick="send()">Send Message</button>
+
+</section>
+
+<footer>
+
+<h3>EasyToll Online Toll Payment System</h3>
+
+<p>Email : support@easytoll.com</p>
+
+<p>Phone : +91 9876543210</p>
+
+<p>© 2026 EasyToll. All Rights Reserved.</p>
+
+</footer>
+
+<script>
+
+function login(){
+
+alert("Login Successful!");
+
+}
+
+function wallet(){
+
+alert("Money Added Successfully!");
+
+}
+
+function qr(){
+
+alert("QR Code Generated!");
+
+}
+
+function verify(){
+
+alert("Toll Pass Verified!");
+
+}
+
+function send(){
+
+alert("Message Sent Successfully!");
+
+}
+
+</script>
+
+</body>
+
+</html>

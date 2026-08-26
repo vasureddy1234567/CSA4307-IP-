@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BlossomGifts</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:#fff5f8;
+}
+
+header{
+background:#e91e63;
+color:white;
+padding:20px;
+text-align:center;
+}
+
+header h1{
+font-size:40px;
+}
+
+nav{
+margin-top:15px;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin:15px;
+font-size:18px;
+font-weight:bold;
+}
+
+nav a:hover{
+color:yellow;
+}
+
+.hero{
+height:420px;
+background:url("https://images.unsplash.com/photo-1526047932273-341f2a7631f9?auto=format&fit=crop&w=1400&q=80");
+background-size:cover;
+background-position:center;
+display:flex;
+justify-content:center;
+align-items:center;
+}
+
+.hero-box{
+background:rgba(0,0,0,.6);
+padding:35px;
+border-radius:10px;
+text-align:center;
+color:white;
+}
+
+.hero-box h2{
+font-size:38px;
+margin-bottom:15px;
+}
+
+.hero-box p{
+font-size:18px;
+margin-bottom:20px;
+}
+
+.hero-box button{
+padding:12px 30px;
+background:#ff9800;
+border:none;
+color:white;
+font-size:18px;
+cursor:pointer;
+border-radius:5px;
+}
+
+.categories{
+padding:50px;
+text-align:center;
+}
+
+.categories h2{
+font-size:35px;
+margin-bottom:30px;
+}
+
+.boxes{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:20px;
+}
+
+.box{
+background:white;
+width:220px;
+padding:20px;
+border-radius:10px;
+box-shadow:0 4px 8px gray;
+transition:.3s;
+}
+
+.box:hover{
+transform:scale(1.05);
+}
+
+.box h3{
+color:#e91e63;
+margin-bottom:10px;
+}
+
+.products{
+padding:50px;
+background:#fff;
+}
+
+.products h2{
+text-align:center;
+margin-bottom:30px;
+font-size:35px;
+}
+
+.cards{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:25px;
+}
+
+.card{
+background:white;
+width:260px;
+border-radius:10px;
+overflow:hidden;
+box-shadow:0 4px 10px gray;
+}
+
+.card img{
+width:100%;
+height:180px;
+}
+
+.card h3{
+padding:10px;
+}
+
+.card p{
+padding:10px;
+}
+
+.price{
+padding:10px;
+font-size:22px;
+color:green;
+font-weight:bold;
+}
+
+.card button{
+margin:10px;
+width:90%;
+padding:10px;
+background:#e91e63;
+color:white;
+border:none;
+cursor:pointer;
+border-radius:5px;
+}
+
+.admin{
+padding:50px;
+background:#ffeef4;
+text-align:center;
+}
+
+.admin h2{
+font-size:35px;
+margin-bottom:20px;
+}
+
+.admin input{
+width:300px;
+padding:12px;
+margin:10px;
+border:1px solid gray;
+border-radius:5px;
+}
+
+.admin button{
+padding:12px 25px;
+background:#e91e63;
+color:white;
+border:none;
+cursor:pointer;
+border-radius:5px;
+}
+.contact{
+padding:50px;
+text-align:center;
+background:#fff0f5;
+}
+
+.contact h2{
+font-size:35px;
+margin-bottom:20px;
+}
+
+.contact input,
+.contact textarea{
+width:70%;
+padding:12px;
+margin:10px;
+border:1px solid gray;
+border-radius:5px;
+}
+
+.contact button{
+padding:12px 30px;
+background:#e91e63;
+color:white;
+border:none;
+cursor:pointer;
+border-radius:5px;
+}
+
+footer{
+background:#222;
+color:white;
+text-align:center;
+padding:20px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<h1>BLOSSOM GIFTS</h1>
+
+<nav>
+
+<a href="#">Home</a>
+
+<a href="#">Flowers</a>
+
+<a href="#">Gifts</a>
+
+<a href="#">Categories</a>
+
+<a href="#">Admin</a>
+
+<a href="#">Contact</a>
+
+</nav>
+
+</header>
+
+<section class="hero">
+
+<div class="hero-box">
+
+<h2>Send Love With Beautiful Gifts</h2>
+
+<p>Flowers • Cakes • Chocolates • Gift Hampers</p>
+
+<button>Shop Now</button>
+
+</div>
+
+</section>
+
+<section class="categories">
+
+<h2>Shopping Categories</h2>
+
+<div class="boxes">
+
+<div class="box">
+<h3>🌹 Roses</h3>
+<p>Fresh flower bouquets</p>
+</div>
+
+<div class="box">
+<h3>🎂 Cakes</h3>
+<p>Birthday & Anniversary Cakes</p>
+</div>
+
+<div class="box">
+<h3>🍫 Chocolates</h3>
+<p>Premium Chocolate Gifts</p>
+</div>
+
+<div class="box">
+<h3>🎁 Gift Hampers</h3>
+<p>Special Gift Collections</p>
+</div>
+
+</div>
+
+</section>
+
+<section class="products">
+
+<h2>Popular Products</h2>
+
+<div class="cards">
+
+<div class="card">
+
+<img src="https://picsum.photos/300/200?flower1">
+
+<h3>Red Rose Bouquet</h3>
+
+<p>Beautiful fresh roses.</p>
+
+<div class="price">₹999</div>
+
+<button onclick="buy()">Buy Now</button>
+
+</div>
+
+<div class="card">
+
+<img src="https://picsum.photos/300/200?flower2">
+
+<h3>Chocolate Basket</h3>
+
+<p>Premium imported chocolates.</p>
+
+<div class="price">₹799</div>
+
+<button onclick="buy()">Buy Now</button>
+
+</div>
+
+<div class="card">
+
+<img src="https://picsum.photos/300/200?flower3">
+
+<h3>Birthday Cake</h3>
+
+<p>Fresh Chocolate Cake.</p>
+
+<div class="price">₹699</div>
+
+<button onclick="buy()">Buy Now</button>
+
+</div>
+
+<div class="card">
+
+<img src="https://picsum.photos/300/200?flower4">
+
+<h3>Gift Hamper</h3>
+
+<p>Flowers with chocolates.</p>
+
+<div class="price">₹1499</div>
+
+<button onclick="buy()">Buy Now</button>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="admin">
+
+<h2>Admin Panel</h2>
+
+<input type="text" placeholder="Add New Product"><br>
+
+<input type="number" placeholder="Product Price"><br>
+
+<button onclick="addProduct()">Add Product</button>
+
+<button onclick="updatePrice()">Update Price</button>
+
+<button onclick="removeProduct()">Remove Product</button>
+
+</section>
+
+<section class="contact">
+
+<h2>Customer Checkout Details</h2>
+
+<input type="text" placeholder="Customer Name"><br>
+
+<input type="email" placeholder="Email"><br>
+
+<input type="text" placeholder="Delivery Address"><br>
+
+<textarea placeholder="Special Instructions"></textarea><br>
+
+<button onclick="checkout()">Checkout</button>
+
+</section>
+
+<footer>
+
+<h3>BlossomGifts Online Shopping</h3>
+
+<p>Email : support@blossomgifts.com</p>
+
+<p>Phone : +91 9876543210</p>
+
+<p>© 2026 BlossomGifts. All Rights Reserved.</p>
+
+</footer>
+
+<script>
+
+function buy(){
+alert("Product Added to Cart!");
+}
+
+function addProduct(){
+alert("New Product Added Successfully!");
+}
+
+function updatePrice(){
+alert("Product Price Updated!");
+}
+
+function removeProduct(){
+alert("Product Removed Successfully!");
+}
+
+function checkout(){
+alert("Order Placed Successfully!");
+}
+
+</script>
+
+</body>
+
+</html>
